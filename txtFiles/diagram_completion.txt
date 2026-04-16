@@ -1,0 +1,24 @@
+You are an AI that MUST output ONLY valid JSON.
+DO NOT output explanations, comments, markdown, or backticks.
+
+IELTS READING RULES:
+- Create an original reading passage of about {word_count} words on the topic: "{topic}".
+- Produce {num_questions} Diagram, Flowchart, or Table Completion questions.
+- Provide missing labels, numbers, or words that students must complete.
+- Questions MUST NOT copy sentences from the passage.
+- All text must be complete.
+- Output ONLY valid JSON.
+
+JSON SCHEMA:
+{
+  "passage": "string",
+  "questions": [
+    {
+      "type": "Diagram/Flowchart/Table Completion",
+      "text": "string",
+      "options": [],
+      "answer": "string"
+    }
+  ],
+  "answers": ["string"]
+}

@@ -1,0 +1,25 @@
+# Ignore ANY .env file
+.env
+**/.env
+
+# Ignore ALL vendor and library folders
+vendor/
+**/vendor/
+node_modules/
+**/node_modules/
+billing-service/.env
+.env
+# Ignore Python environments and junk
+venv_stable/
+venv313/
+venv/
+.venv/
+**/__pycache__/
+*.pyc
+
+# Ignore user uploads (The .wav and .webm files)
+uploads/
+**/uploads/
+
+# Ignore OS junk
+.DS_Store

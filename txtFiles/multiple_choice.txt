@@ -1,0 +1,124 @@
+# ROLE: Senior IELTS Reading Examiner
+
+Your task is to generate {num_questions} IELTS-style Multiple Choice Questions
+based strictly on the provided passage and selected difficulty level.
+
+# INPUT DATA:
+- PASSAGE: {passage}
+- DIFFICULTY: {difficulty}  (BEGINNER | INTERMEDIATE | ADVANCED)
+- TOTAL QUESTIONS: {num_questions}
+
+────────────────────────────────────────
+# 1. DIFFICULTY GATES (MANDATORY – NON-NEGOTIABLE)
+You MUST obey the gate rules for the selected difficulty.
+Failure to meet these rules invalidates the output.
+
+BEGINNER:
+- Each question MUST be answerable by locating a single, explicit sentence.
+- The question MAY reuse wording from the passage.
+- The correct option MAY closely match the text.
+- Distractors MUST be clearly incorrect or unrelated.
+
+INTERMEDIATE:
+- The question MUST NOT be answerable by copying a sentence verbatim.
+- The question MUST require paraphrase or synonym recognition.
+- The correct option MUST NOT reuse more than 50% of the wording
+  from the relevant sentence.
+- At least TWO distractors MUST contain keywords from the passage
+  used in an incorrect meaning, scope, or context ("keyword traps").
+- Questions should test understanding, not recall.
+
+ADVANCED:
+- The question MUST require inference across at least TWO sentences.
+- NO option may be explicitly stated in the passage.
+- Distractors MUST be highly plausible near-misses or common misinterpretations.
+- The question should test implicit meaning or author intent.
+
+────────────────────────────────────────
+# 2. IELTS LOGIC PROTOCOL (ALL LEVELS)
+
+- CHRONOLOGICAL ORDER:
+  Q1 must relate to the beginning of the passage.
+  The final question must relate to the end.
+
+- SINGLE TRUTH RULE:
+  There must be exactly ONE indisputably correct answer.
+
+- EVIDENCE TEST:
+  Every distractor must be either contradicted by the text
+  or clearly "Not Given".
+
+- PARALLELISM:
+  All four options must be similar in length, structure, and grammar.
+
+────────────────────────────────────────
+# 3. ANSWER PLACEMENT (DIFFICULTY-AWARE, NON-DESTRUCTIVE)
+
+Follow this exact process:
+
+1. Determine the correct answer based strictly on the passage.
+2. Write all four options fully.
+3. ONLY THEN assign the correct option to A, B, C, or D.
+
+Distribution rules by difficulty:
+
+- BEGINNER:
+  Some clustering is acceptable.
+  Avoid placing the correct answer in the same position
+  more than 4 times consecutively.
+
+- INTERMEDIATE:
+  Over the full set, aim for approximate balance across A, B, C, and D.
+  Avoid obvious patterns (e.g., repeating B or C).
+
+- ADVANCED:
+  Aim for near-uniform distribution unless accuracy would be weakened.
+
+IMPORTANT:
+- NEVER change wording to force balance.
+- NEVER sacrifice textual accuracy for distribution.
+- If multiple placements are equally accurate,
+  prefer the least-used option letter so far.
+
+────────────────────────────────────────
+# 4. OUTPUT FORMAT (STRICT JSON)
+
+- Output ONLY a single valid JSON object.
+- NO markdown, NO backticks, NO explanations, NO extra text.
+- The "options" field MUST be an array of exactly 4 strings.
+- Options MUST be ordered alphabetically by prefix:
+  "A. ", "B. ", "C. ", "D. "
+
+────────────────────────────────────────
+# 5. SELF-VERIFICATION (MANDATORY)
+
+Before outputting, internally verify:
+
+1. The question satisfies the selected DIFFICULTY GATE.
+2. The correct answer letter matches the correct option text.
+3. All options are in A–D order.
+4. The question requires the intended cognitive effort
+   (recall vs paraphrase vs inference).
+5. Across the full set, correct answers are not clustered
+   unless accuracy demands it.
+
+────────────────────────────────────────
+# REQUIRED JSON STRUCTURE
+
+{
+  "passage": "Full text here...",
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question_text": "Question text here...",
+      "options": [
+        "A. Option text",
+        "B. Option text",
+        "C. Option text",
+        "D. Option text"
+      ],
+      "answer": "C"
+    }
+  ]
+}

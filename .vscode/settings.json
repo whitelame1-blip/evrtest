@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    "**/vendor": false
+  },
+  "search.exclude": {
+    "**/vendor": false
+  },
+  "intelephense.files.exclude": []
+}

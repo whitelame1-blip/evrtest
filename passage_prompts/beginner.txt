@@ -1,0 +1,19 @@
+STRICT PASSAGE GENERATION RULES (BEGINNER LEVEL / PASSAGE 1 STYLE):
+
+1. Topic Focus: The text must be non-specialized, descriptive, and highly factual.
+2. Content Length: The passage MUST be exactly {word_count} words long.
+3. Language and Clarity: The writing must be clear, direct, and straightforward. Avoid ambiguity or complex philosophical concepts.
+4. Vocabulary: Use basic to intermediate (A2/B1 level) vocabulary. Avoid rare or specialized academic terminology where common words suffice.
+5. Sentence Structure: Sentences should be predominantly simple or compound. Use short, clear, active-voice sentences. Avoid overly long, nested, or complex sentences.
+6. Cohesion: Use simple, explicit connecting words and phrases (e.g., "First," "Next," "In addition," "Finally").
+7. Paragraph Structure: Organize the text into 3-4 distinct logical sections. However, in the final JSON output, ensure these are joined into a single string using "\n\n" markers, not actual newlines
+8. Factual Accuracy: All information must be based on real-world facts and widely accepted knowledge.
+9. Goal: The passage should make it easy for the reader to locate specific details and identify the main idea of each paragraph.
+
+ANTI-REPETITION RULES:
+
+- Do NOT repeat the same full sentence or phrase more than once.
+- If a key idea must be mentioned again, rephrase it using simple synonyms.
+- Avoid repeating opening phrases such as "Climate change is a big problem" multiple times.
+- Use pronouns (it, this problem, these effects) where clarity is not lost.
+- Each paragraph should introduce at least one new detail or example.

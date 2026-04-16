@@ -1,0 +1,240 @@
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body {
+  background: linear-gradient(135deg, #0a0f2c, #091c47, #00264d);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ---------- CONTAINER ---------- */
+.register-container {
+  display: flex;
+  width: 950px;
+  height: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: 0.3s ease;
+}
+
+/* ---------- LEFT AI PANEL ---------- */
+.ai-panel {
+  flex: 1;
+  background: radial-gradient(circle at top left, #00d4ff, #001a33);
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #e0f7fa;
+}
+
+.ai-panel h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.ai-panel span {
+  color: #00ffff;
+}
+
+.ai-panel p {
+  font-size: 1.1em;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* ---------- RIGHT FORM PANEL ---------- */
+.form-container {
+  flex: 1;
+  padding: 60px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00e5ff;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #aeeaff;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+/* ---------- PASSWORD BOX ---------- */
+
+
+/* ---------- SIGN UP BUTTON ---------- */
+.signup-button {
+  padding-top: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00e5ff, #0077ff);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #0077ff, #00e5ff);
+}
+
+/* ---------- LOGIN LINK ---------- */
+.login-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #00e5ff;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- ERROR ---------- */
+.error {
+  color: #ff6b6b;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ---------- PASSWORD VALIDATION ---------- */
+#password-requirements {
+  margin-top: 10px;
+}
+
+#password-requirements li {
+  list-style: none;
+  font-weight: bold;
+  color: red;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#password-requirements li.valid {
+  color: green;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+
+/* Tablets (max width 900px) */
+@media (max-width: 900px) {
+  .register-container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .ai-panel {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .ai-panel h1 {
+    font-size: 2em;
+  }
+
+  .ai-panel p {
+    font-size: 1em;
+  }
+
+  .form-container {
+    padding: 40px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+/* Mobile devices (max width 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .register-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .ai-panel {
+    padding: 30px 20px;
+  }
+
+  .ai-panel h1 {
+    font-size: 1.8em;
+  }
+
+  .ai-panel p {
+    font-size: 0.9em;
+  }
+
+  .form-container {
+    padding: 30px 20px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #password-requirements li {
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+

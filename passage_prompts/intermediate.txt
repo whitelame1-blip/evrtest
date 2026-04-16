@@ -1,0 +1,44 @@
+STRICT PASSAGE GENERATION RULES (INTERMEDIATE LEVEL / PASSAGE 2 STYLE)
+1. Topic Focus
+The text must be non-specialized and informational, based on real-world topics familiar to a general audience.
+The topic may involve social, scientific, historical, or environmental themes but must not require expert knowledge.
+2. Content Length
+The passage MUST be exactly {word_count} words long.
+3. Language & Meaning
+The writing must be clear but moderately sophisticated.
+Avoid ambiguity, but allow implicit meaning that requires careful reading.
+Main ideas should not always be stated in the same sentence as supporting details.
+4. Vocabulary
+Use intermediate-level vocabulary (B1+/B2).
+Prefer paraphrasing and synonyms over repetition.
+Avoid rare, technical, or academic terminology unless it is commonly known and clearly explained in context.
+5. Sentence Structure
+Use a mix of simple, compound, and controlled complex sentences.
+Include relative clauses and passive voice sparingly and naturally.
+Avoid overly long or heavily nested sentences.
+6. Cohesion & Referencing
+Use cohesive devices such as however, therefore, as a result, for example, in contrast.
+Refer back to ideas using pronouns and paraphrased references rather than repeating key nouns.
+7. Paragraph Structure
+Organize the text into 3–4 logical paragraphs, each with:
+A clear main idea
+Supporting explanation or example
+In the final JSON output, paragraphs must be joined into a single string using "\n\n" markers, not actual newlines.
+8. Factual Accuracy
+All information must be factually accurate and based on widely accepted knowledge.
+No invented statistics, fictional studies, or speculative claims.
+9. Reader Task Alignment
+The passage should require the reader to:
+Identify paraphrased information
+Connect ideas across sentences
+Distinguish main ideas from supporting details
+Information should be locatable but not always word-for-word.
+ANTI-REPETITION & PARAPHRASING RULES
+Do NOT repeat the same sentence structure or phrasing more than once.
+If a key idea must reappear, restate it using different vocabulary or grammatical form.
+Avoid repeated sentence openers (e.g., “Many people believe…”).
+Each paragraph must introduce at least one new perspective, cause, effect, or example.
+DIFFICULTY INTEGRITY CHECK (MANDATORY)
+Before finalizing the passage, verify:
+Could a reader answer factual questions without direct sentence matching?
+Are ideas restated using synonyms or rephrased structures?

@@ -1,0 +1,45 @@
+--- PRIORITY 1: THE FORCED KEY ---
+You MUST follow this exact answer sequence:
+{forced_key}
+
+--- PRIORITY 2: AIRTIGHT LOGIC PROTOCOL (THE EVIDENCE TEST) ---
+For every question you generate, you must follow this internal "Evidence Test" to ensure the answer is 100% accurate:
+
+1. FOR "TRUE" QUESTIONS:
+   - ACTION: Find a specific "Anchor Sentence" in the passage.
+   - EXECUTION: Paraphrase that sentence using synonyms.
+   - VERIFICATION: If the question is read back, it must be a direct logical equivalent of the Anchor Sentence.
+
+2. FOR "FALSE" QUESTIONS:
+   - ACTION: Find a specific "Anchor Sentence" in the passage.
+   - EXECUTION: Change ONE critical fact (Quantity: 'all' to 'some'; Frequency: 'always' to 'rarely'; Action: 'increased' to 'stayed the same').
+   - VERIFICATION: The passage must EXPLICITLY prove the question is wrong. If the text says "It is possible," the question should say "It is impossible."
+
+3. FOR "NOT_GIVEN" QUESTIONS:
+   - ACTION: Find a "Topic Sentence" in the passage.
+   - EXECUTION: Keep the topic (the nouns) but add a "Missing Link." This can be a comparison (X is better than Y), a specific reason (X happened BECAUSE of Z), or a preference/feeling that is never mentioned in the text.
+   - VERIFICATION: If a human looks for the answer, they should find the subject, but be unable to find the specific detail/relationship you added. 
+
+--- PRIORITY 3: DIFFICULTY LEVEL & STYLE ---
+Difficulty: {difficulty}
+
+
+- Use clear, professional IELTS-style language.
+- Ensure no two questions rely on the exact same sentence.
+- Spread the questions chronologically through the text (Q1 should be near the start, Q10 near the end).
+
+--- PRIORITY 4: MANDATORY JSON STRUCTURE ---
+Use this structure EXACTLY. Do not add extra fields:
+{
+  "passage": "The text content...",
+  "questions": [
+    { 
+      "id": 1, 
+      "type": "true_false_not_given", 
+      "question_text": "...", 
+      "answer": "..." 
+    }
+  ]
+}
+Note: The "answer" MUST be one of: "TRUE", "FALSE", "NOT_GIVEN".
+

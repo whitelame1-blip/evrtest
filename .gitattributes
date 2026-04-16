@@ -1,0 +1,27 @@
+# 1. Automatic Line Ending Handling
+# This tells Git to detect text files and convert them to 
+# Linux-style (LF) when pushing to the server.
+* text=auto
+
+# 2. Force Specific Text Files
+# This ensures your logic files are always treated as text.
+*.php text
+*.py text
+*.js text
+*.css text
+*.html text
+*.txt text
+*.json text
+
+# 3. CRITICAL: Shell Scripts
+# Bash scripts MUST have Linux line endings (LF) or they 
+# will fail to run on your Vultr server.
+*.sh text eol=lf
+
+# 4. Binary Files
+# Tell Git NOT to touch the formatting of images or PDFs.
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.pdf -text
+*.wav -text
+*.webm -text
